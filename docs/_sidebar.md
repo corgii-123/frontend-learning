@@ -3,7 +3,7 @@
 - JavaScript
   - [闭包](closure.md)
   - [前端优化](optimize.md)
-  - [几个面试题](interview/forJs.md)
+  - [几个面试题](interview/forJS.md)
 
 - CSS
   - [grid布局](grid.md)
