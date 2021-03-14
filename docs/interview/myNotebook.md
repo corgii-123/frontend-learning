@@ -96,7 +96,7 @@
 
 ---
 
-以上， 还有**游戏方向(TypeScript+百度引擎)**，**可视化/AI方向(echarts+webGL)**。
+以上， 还有游戏方向(TypeScript+百度引擎)，可视化/AI方向(echarts+webGL)。
 
 
 
