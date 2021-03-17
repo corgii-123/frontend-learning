@@ -1,7 +1,7 @@
 ## 框架的几个面试题
 
 ### Vue2.0/3.0双向数据绑定的原理
-  
+
 2.0版本 `ES5: Object.defineProperty()`实现数据劫持。核心思路就是重写了setter和getter，使数据修改后页面也要渲染。
 缺点：需要对每个属性都进行属性的重新定义；每一个事件input都要绑定事件；需要克隆一个新的数据对象。
 ```html
@@ -123,6 +123,24 @@ React之所以选择MVC是因为它不认为所有的input框都需要双向数�
 `createWatcher()`调用，里面核心方法是使用了`vm.$watch()`，创建一个watcher使用的是`new Watcher(vm, expOrFn, cb, options)`，第二个参数就是传入的字符串指定那个变量，cb是定义的回调函数，继续进行取值的操作，将传入的字符串包装成函数(模板字符串)。
 `this.lazy: false`，调用`this.get()`，把watcher放到全局上，进行依赖收集直接执行`this.getter()`，如果是`deep: true`就每一项遍历并递归把watcher存起来。
 
-### vue的生命周期
+### Vue的生命周期
 掌握生命周期在什么时候被调用，每个生命周期内部可以做什么事
+
+### Vue的key有什么用
+
+1. 用来区分元素。
+2. 尽量不要使用index作为key，因为若是reverse了会全部创建新的元素，效率低。
+3. 使用唯一的key值区分元素，就不会造成性能问题。
+4. 可以自己用模板字负串自己定义key。
+
+### v-if和v-show的使用
+
+1. template标签不能和v-show连用。
+2. vue中会默认采用复用代码，注意在v-if和v-else中使用:key属性。
+
+### computed和watch
+
+1. 用法不一样，只是有的时候可以实现相同的功能。
+2. 计算是根据某个值来算，watch是监听某个值的变化。
+3. 底层都是通过`vm.$watch`
 
